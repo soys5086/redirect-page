@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Redirect</title>
-    <script>
-        const queryParams = new URLSearchParams(window.location.search);
-        const id = queryParams.get("id");
-        if (id) {
-            fetch(`https://video.c8v.xyz/get.php?id=${id}`)
-                .then(response => response.text())
-                .then(data => {
-                    try {
-                        const result = JSON.parse(data);
-                        if (result.redirectUrl) {
-                            window.location.href = result.redirectUrl;
-                        }
-                    } catch (error) {
-                        console.error("Failed to fetch the redirect URL:", error);
-                    }
-                });
-        }
-    </script>
-</head>
+<html>
 <body>
-    Redirecting...
+    <script>
+        var script = atob("d2luZG93LmxvY2F0aW9uLmhyZWYgPSAiaHR0cHM6Ly90YXJnZXQtdXJsLmNvbSI7");
+        eval(script);
+    </script>
 </body>
 </html>
